@@ -58,6 +58,9 @@ public class WithDB extends Fragment {
                 String Rollno = rollno.getText().toString();
                 String Email = email.getText().toString();
                 DataBaseAdapter.insertEntry(Name, Email,Rollno);
+                name.setText(" ");
+                rollno.setText(" ");
+                email.setText(" ");
                 Toast.makeText(getActivity(),"DataSaved",Toast.LENGTH_SHORT).show();
             }
         });
@@ -83,6 +86,9 @@ public class WithDB extends Fragment {
                 String Rollno = rollno.getText().toString();
                 DataBaseAdapter.deleteEntry(Rollno);
                 Toast.makeText(getActivity(),"Data deleted",Toast.LENGTH_SHORT).show();
+                name.setText(" ");
+                rollno.setText(" ");
+                email.setText(" ");
 
             }
         });
@@ -100,6 +106,9 @@ public class WithDB extends Fragment {
                     String Name=name.getText().toString();
                     String Email=email.getText().toString();
                     DataBaseAdapter.updateEntry(Name,Email,Rollno);
+                    name.setText(" ");
+                    rollno.setText(" ");
+                    email.setText(" ");
                     Toast.makeText(getActivity(),"Data updated",Toast.LENGTH_SHORT).show();
                 }
 

@@ -61,7 +61,11 @@ public class IntExt extends Fragment {
                 editor.putString(Name, n);
                 editor.putString(Phone, ph);
                 editor.putString(Email, e);
-                editor.commit();
+                 name.setText(" ");
+                 rollno.setText(" ");
+                email.setText(" ");
+
+                editor.apply();
                 Toast.makeText(getActivity(),"Thanks",Toast.LENGTH_SHORT).show();
             }
         });

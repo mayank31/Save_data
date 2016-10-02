@@ -60,6 +60,9 @@ public class Shared extends Fragment {
                     outputStream.write(Name.getBytes());
                     outputStream.write(Rollno.getBytes());
                     outputStream.write(Email.getBytes());
+                    name.setText(" ");
+                    rollno.setText(" ");
+                    email.setText(" ");
                     outputStream.close();
                     Toast.makeText(getActivity(),"saved in internal storage",Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
@@ -79,13 +82,16 @@ public class Shared extends Fragment {
                     if (Environment.MEDIA_MOUNTED.equals(state)) {
                         File store = Environment.getExternalStorageDirectory();
                         File directory = new File(store.getAbsolutePath());
-                        directory.mkdir();
+
                         file = new File(directory, "External_file1.txt");
                         outputStream = new FileOutputStream(file);
 String a1=name.getText().toString();
                         a1=a1+"\n"+rollno.getText().toString()+"\n"+email.getText().toString();
 
                         outputStream.write(a1.getBytes());
+                        name.setText(" ");
+                        rollno.setText(" ");
+                        email.setText(" ");
                         outputStream.close();
                         Toast.makeText(getActivity(),"saved in external storage",Toast.LENGTH_SHORT).show();
                     }

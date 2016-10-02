@@ -33,9 +33,7 @@ public class DataBaseAdapter {
     public void close() {
         db.close();
     }
-    public SQLiteDatabase getDatabaseInstance() {
-        return db;
-    }
+
 
     public void insertEntry(String Name, String email,String rollno) {
         ContentValues newValues = new ContentValues();
